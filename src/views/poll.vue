@@ -2,7 +2,7 @@
   <div class="h-screen flex justify-center items-center">
  <div class="max-w-md mx-auto bg-white/10 border rounded-xl shadow-md overflow-hidden md:max-w-2xl m-4">
     <div class="p-8">
-      <h2 class="text-2xl font-bold mb-4">{{ question }}</h2>
+      <h2 class="text-2xl font-bold !mb-4 text-gray-50">{{ question }}</h2>
       <div v-if="!hasVoted">
         <button
           v-for="(option, index) in options"
@@ -19,7 +19,7 @@
           :key="index"
           class="mb-4"
         >
-          <div class="flex justify-between mb-1">
+          <div class="flex text-gray-50 justify-between mb-1">
             <span>{{ option.text }}</span>
             <span>{{ option.percentage.toFixed(1) }}%</span>
           </div>
